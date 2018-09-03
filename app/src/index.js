@@ -4,5 +4,10 @@ import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import Layout from './components/Layout.jsx';
+
+ReactDOM.render( <Layout />, document.getElementById('root'))
+
+
 registerServiceWorker();
+

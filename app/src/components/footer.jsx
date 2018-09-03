@@ -1,11 +1,24 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
-export default class Footer extends Component {
+class Footer extends Component {
+
+    constructor() {
+        super();
+        this.state = { company: "Infoxtech", year: new Date() }
+
+        setTimeout(() => {
+            this.setState({ company: "foxteam" })
+        }, 2000)
+
+    }
+
     render() {
         return (
             <div>
-                A really fancy footer.
+                This webapp is copyrighted to {this.state.company} with {this.state.year.getFullYear()}
             </div>
-        )
+        );
     }
 }
+
+export default Footer;
